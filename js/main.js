@@ -4,7 +4,7 @@ var audio;
 $('#pause').hide();
 
 //initializer- play first song
-iniAudio($('playlist li:first-child'));
+iniAudio($('#playlist li:first-child'));
 
 function iniAudio(element){
 	var song=element.attr('song');
@@ -13,17 +13,17 @@ function iniAudio(element){
 	var artist=element.attr('artist');
 	
 	//Create a new audio object
-	audio=new audio('media/' + song);
+	audio= new Audio('media/' + song);
 	
 	if(!audio.currentTime){
 		$('#duration').html('0.00');
 	}
 	
-	$('audio-player .title').text(title);
-	$('audio-player .artist').text(artist);
+	$('#audio-player .title').text(title);
+	$('#audio-player .artist').text(artist);
 	
 	//insert cover image
-	$('img-cover').attr('src','images/covers/' + cover);
+	$('img.cover').attr('src','images/covers/' + cover);
 	
 	$('#playlist li').removeClass('active');
 	element.addClass('active');
@@ -44,7 +44,7 @@ $('#pause').click(function (){
 	audio.pause();
 	$('#pause').hide();
 	$('#play').show();
-})
+});
 
 //Stop Buttton
 $('#stop').click(function (){
@@ -58,7 +58,7 @@ $('#stop').click(function (){
 //Next Buttton
 $('#next').click(function (){
 	audio.pause();
-	var next=$('#playList li.active').next();
+	var next=$('#playlist li.active').next();
 	if(next.length==0){
 		next=$('#playlist li:first-child');
 	}
@@ -99,8 +99,8 @@ $('#volume').change(function(){
 function showDuration(){
 	$(audio).bind('timeupdate', function(){
 		//Get hours and minutes
-		var s=pareInt(audio.currentTime %60);
-		var m=pareInt((audio.currentTime /60)%60);
+		var s=parseInt(audio.currentTime %60);
+		var m=parseInt((audio.currentTime /60)%60);
 		//Add 0 if seconds less than 10
 		if (s<10){
 			s='0' + s;
