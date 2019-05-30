@@ -13,7 +13,7 @@ function iniAudio(element){
 	var artist=element.attr('artist');
 	
 	//Create a new audio object
-	audio= new Audio('media/' + song);
+	audio = new Audio('media/' + song);
 	
 	if(!audio.currentTime){
 		$('#duration').html('0.00');
@@ -36,8 +36,8 @@ $('#play').click(function (){
 	$('#play').hide();
 	$('#pause').show();
 	$('#duration').fadeIn(400);
+	showDuration();
 });
-
 
 //Pause Button
 $('#pause').click(function (){
@@ -81,7 +81,7 @@ $('#prev').click(function (){
 
 //Playlist Song Click
 $('#playlist li').click(function (){
-	audio.pause();
+	audio.pause ();
 	initAudio($(this));
 	$('#play').hide();
 	$('#pause').show();
@@ -102,13 +102,13 @@ function showDuration(){
 		var s=parseInt(audio.currentTime %60);
 		var m=parseInt((audio.currentTime /60)%60);
 		//Add 0 if seconds less than 10
-		if (s<10){
-			s='0' + s;
+		if (s < 10){
+			s = '0' + s;
 		}
 		$('#duration').html(m + '.' + s);
-		var value= 0;
+		var value = 0;
 		if(audio.currentTime > 0){
-			value=Math.floor((100/audio.duration) * audio.currentTime);
+			value = Math.floor((100/audio.duration) * audio.currentTime);
 		}
 		$('#progress').css('width',value+'%');
 	});
