@@ -1,6 +1,6 @@
 *{
     margin: 0;
-	padding: 0;
+	padding:0;
 	border: none;
 	outline: none;
 }
@@ -9,8 +9,8 @@ body{
 	font-family:arial;
 	font-size:13px;
 	line-height:1.5em;
-	color:#6C3;
-	background-color:#06F;
+	color:#FFC;
+	background-color:#6DD36C;
 }
 
 .clearfix{
@@ -20,14 +20,14 @@ body{
 #container{
 	width:330px;
 	min-height:400px;
-	background:#FD0A8B;
+	background:#34BDBB;
 	overflow:auto;
-	margin:60px auto;
+	margin: 60px auto;
 	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
 	border-radius:10px;
-	border:#3C9 solid 2px;
+	border:#FC6 solid 2px;
 }
-
 
 #audio-image{
 	position:relative;
@@ -37,7 +37,7 @@ body{
 }
 
 #audio-info{
-	text-align:center;
+	text-align: center;
 }
 
 #audio-info .artist{
@@ -48,87 +48,86 @@ body{
 	width:100%;
 	z-index:1;
 }
-
-input#volume{
-	width:95%;
-	margin-left:2%;
-	-webkit-appearance:none !important;
-	background:#CF9;
-	height:1px;
-	margin-bottom:20px;
-}
-
-
-#buttons{
-	width:90%;
-	display:block;
-	margin:15px auto;
-	margin-left:23px;
-	overflow:auto;
-}
-
-button#play{
-	width:70px;
-	height:70px;
-	background:url(../images/play.png) no-repeat;float:left;
-}
-
-button#pause{
-	width:70px;
-	height:70px;
-	background:url(../images/pause.png) no-repeat;float:left;
-}
-
-button#stop{
-	width:70px;
-	height:70px;
-	background:url(../images/stop.png) no-repeat;float:left;
-}
-
-
-#playlist{
-list-style-type:none;
-padding:10px;
-}
-
-#playlist li{
-	cursor:pointer;
-	margin:5px;
-}
-
-#tracker{
-	position:relative;
-	width:100%;
-}
-
-#playlist li.active{
-	font-weight:bold;
-	padding:3px;
-	background:#6FF;
-}
-
-#progressBar{
-	width:80%;
-	margin-left:2%;
-	margin-bottom:20px;
-	margin-top:9px;
-	height:10px;
-	background:url(../images/progress_bg.png)no-repeat;float:left;
-	float:left;
-}
-
-#progress{
-	background:url(../images/progress.png)no-repeat;float:left;
-	height:10px;
-	display:inline-block;
-}
-
-#duration{
-	position:absolute;
-	top:0;
-	right:10px;
-	padding:4px 8px;
-	background:#FF3;
-	border-radius:5px;
-}
+   
+   input#volume{
+	   width:95%;
+	   margin-left:2%;
+	   -webkit-appearance: none !important;
+	   background:#F36;
+	   height:1px;
+	   margin-bottom:20px;
+   }
+   
+   
+   #buttons{
+	   width:90%;
+	   display:block;
+	   margin: 15px auto;
+	   margin-left:23px;
+	   overflow:auto;
+   }
+   
+   button#play{
+	   width:70px;
+	   height:70px;
+	   background:url(../images/play.png) no-repeat;float:left;
+   }
+   
+   button#pause{
+	   width:70px;
+	   height:70px;
+	   background:url(../images/pause.png) no-repeat;float:left; 
+   }
+   
+   button#stop{
+	   width:70px;
+	   height:70px;
+	   background:url(../images/stop.png) no-repeat;float:left;
+   }
+   
+   
+   #playlist{
+	   list-style-type:none;
+	   padding:10px;
+   }
+   
+    #playlist li{
+		cursor:pointer;
+		margin:5px;
+	}
 	
+	#tracker{
+		position:relative;
+		width:100%;
+	}
+	
+	#playlist li.active{
+		font-weight:bold;
+		padding:3px;
+		background:#F99;
+	}
+   
+   #progressBar{
+	   width:80%;
+	   margin-left:2%;
+	   margin-bottom:20px;
+	   margin-top:9px;
+	   height:10px;
+	   background:url(../images/progress_bg.png) no-repeat;
+	   float:left;
+   }
+   
+   #progress{
+	   background:url(../images/progress.png) no-repeat;
+	   height:10px;
+	   display:inline-block;
+   }
+   
+   #duration{
+	   position:absolute;
+	   top:0;
+	   right:10px;
+	   padding:4px 8px;
+	   background:#F90;
+	   border-radius:5px;
+   }
